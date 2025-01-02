@@ -4,5 +4,4 @@ export const enum BarTypes {
   End,
   BeginRepeat,
   EndRepeat,
-  BeginAndEndRepeat,
 }

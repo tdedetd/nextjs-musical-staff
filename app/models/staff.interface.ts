@@ -8,6 +8,10 @@ export interface Staff {
   tempo: number;
   scale: Scale;
   tonality: Note;
+  signature: {
+    count: number;
+    value: number;
+  };
   clefs?: Clef[];
   bars: Bar[];
 }

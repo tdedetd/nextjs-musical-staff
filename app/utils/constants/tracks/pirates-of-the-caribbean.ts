@@ -7,6 +7,10 @@ export const piratesOfTheCaribbean: Staff = {
   tempo: 140,
   scale: 'min',
   tonality: 'D',
+  signature: {
+    count: 3,
+    value: 4,
+  },
   clefs: ['treble', 'bass'],
   bars: [
     {
