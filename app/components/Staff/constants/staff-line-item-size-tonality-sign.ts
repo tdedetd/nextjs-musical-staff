@@ -1,1 +1,1 @@
-export const staffLineItemSizeTonalitySign = 20;
+export const staffLineItemSizeTonalitySign = 10;

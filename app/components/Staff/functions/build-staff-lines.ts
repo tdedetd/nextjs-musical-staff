@@ -13,14 +13,14 @@ export function buildStaffLines(staff: IStaff, containerWidth: number): IStaffVi
   const lines: IStaffViewLine[] = [];
 
   let currentLineIndex = 0;
-  let { line, width } = getNewLine(currentLineIndex, staff);
+  let { line, width } = getNewLine(currentLineIndex, 0, staff);
 
-  staff.bars.forEach((bar) => {
+  staff.bars.forEach((bar, barIndex) => {
     const barSize = getBarSize(bar);
     if (width + barSize > containerWidth) {
       lines.push(line);
       currentLineIndex += 1;
-      const lineInfo = getNewLine(currentLineIndex, staff);
+      const lineInfo = getNewLine(currentLineIndex, barIndex, staff);
       line = lineInfo.line;
       width = lineInfo.width;
     }
@@ -32,7 +32,7 @@ export function buildStaffLines(staff: IStaff, containerWidth: number): IStaffVi
   return lines;
 }
 
-function getNewLine(index: number, staff: IStaff): { line: IStaffViewLine, width: number } {
+function getNewLine(index: number, barIndex: number, staff: IStaff): { line: IStaffViewLine, width: number } {
   let items: IStaffViewLineItem[] = [
     { type: StaffViewLineItemTypes.Clef },
     { type: StaffViewLineItemTypes.TonalitySign },
@@ -46,7 +46,13 @@ function getNewLine(index: number, staff: IStaff): { line: IStaffViewLine, width
     width += staffLineItemSizeSignature;
   }
 
-  return { line: { items }, width };
+  return {
+    line: {
+      items,
+      firstBarIndex: barIndex,
+    },
+    width,
+  };
 }
 
 function getBarSize(bar: IBar): number {

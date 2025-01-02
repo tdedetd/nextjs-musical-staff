@@ -12,6 +12,6 @@ export interface IStaff {
     count: number;
     value: number;
   };
-  clefs?: Clef[];
+  clefs: Clef[];
   bars: IBar[];
 }

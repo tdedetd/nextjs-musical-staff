@@ -1,0 +1,7 @@
+.barBorder {
+  border-right: 1px solid var(--foreground);
+}
+
+.spacing {
+  height: 45px;
+}

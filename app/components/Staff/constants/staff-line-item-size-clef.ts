@@ -1,1 +1,1 @@
-export const staffLineItemSizeClef = 20;
+export const staffLineItemSizeClef = 40;
