@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, useLayoutEffect, useRef, useState } from 'react';
-import { StaffView } from './components/StaffView/StaffView';
+import { Staff } from './components/Staff/Staff';
 import { piratesOfTheCaribbean } from './utils/constants/tracks/pirates-of-the-caribbean';
 import { debounce } from './utils/functions/debounce';
 
@@ -23,7 +23,7 @@ export default function Home(): JSX.Element {
 
   return (
     <div ref={containerRef}>
-      <StaffView
+      <Staff
         staff={piratesOfTheCaribbean}
         width={containerWidth}
       />

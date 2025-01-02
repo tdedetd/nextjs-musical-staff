@@ -1,9 +1,9 @@
-import { Bar } from './bar.interface';
+import { IBar } from './bar.interface';
 import { Clef } from './clef.type';
 import { Note } from './note.type';
 import { Scale } from './scale.type';
 
-export interface Staff {
+export interface IStaff {
   name: string;
   tempo: number;
   scale: Scale;
@@ -13,5 +13,5 @@ export interface Staff {
     value: number;
   };
   clefs?: Clef[];
-  bars: Bar[];
+  bars: IBar[];
 }

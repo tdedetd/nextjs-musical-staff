@@ -1,9 +1,9 @@
 import { JSX } from 'react';
-import { StaffViewProps } from './StaffView.props';
-import styles from './StaffView.module.css';
+import { StaffProps } from './Staff.props';
+import styles from './Staff.module.css';
 import { buildStaffLines } from './functions/build-staff-lines';
 
-export function StaffView({ staff, width }: StaffViewProps): JSX.Element {
+export function Staff({ staff, width }: StaffProps): JSX.Element {
   const lines = buildStaffLines(staff, width);
   return (
     <div className={styles.container}>

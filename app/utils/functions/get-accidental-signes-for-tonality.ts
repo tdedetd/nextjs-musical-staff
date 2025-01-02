@@ -1,4 +1,4 @@
-import { DegreeAccidental } from '@/app/models/degree-accidental.interface';
+import { IDegreeAccidental } from '@/app/models/degree-accidental.interface';
 import { Note } from '@/models/note.type';
 import { Scale } from '@/models/scale.type';
 import { majorTonalityAccidentalMapper } from '../constants/major-tonality-accidental-mapper';
@@ -10,7 +10,7 @@ import { formulaSemitones } from '../constants/formula-semitones';
 import { isNotEmpty } from './typeguards/is-not-empty';
 import { isNoteLetter } from './typeguards/is-note-letter';
 
-export function getAccidentalSignesForTonality(root: Note, scale: Scale): DegreeAccidental[] {
+export function getAccidentalSignesForTonality(root: Note, scale: Scale): IDegreeAccidental[] {
   const rootSemitones = noteRelationalSemitones.indexOf(
     noteRelationalSemitones.find((notes) => notes.includes(root)) ?? []
   );

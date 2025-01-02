@@ -1,16 +1,16 @@
-import { Staff } from '@/models/staff.interface';
-import { StaffViewLine } from '../models/staff-view-line.interface';
-import { StaffViewLineItem } from '../models/staff-view-line-item.interface';
+import { IStaff } from '@/models/staff.interface';
+import { IStaffViewLine } from '../models/staff-view-line.interface';
+import { IStaffViewLineItem } from '../models/staff-view-line-item.interface';
 import { StaffViewLineItemTypes } from '../models/staff-view-line-item-types.enum';
 import { getAccidentalSignesForTonality } from '../../../utils/functions/get-accidental-signes-for-tonality';
 import { staffLineItemSizeClef } from '../constants/staff-line-item-size-clef';
 import { staffLineItemSizeTonalitySign } from '../constants/staff-line-item-size-tonality-sign';
 import { staffLineItemSizeSignature } from '../constants/staff-line-item-size-signature';
-import { Bar } from '@/models/bar.interface';
+import { IBar } from '@/models/bar.interface';
 import { staffLineItemSizeNote } from '../constants/staff-line-item-size-note';
 
-export function buildStaffLines(staff: Staff, containerWidth: number): StaffViewLine[] {
-  const lines: StaffViewLine[] = [];
+export function buildStaffLines(staff: IStaff, containerWidth: number): IStaffViewLine[] {
+  const lines: IStaffViewLine[] = [];
 
   let currentLineIndex = 0;
   let { line, width } = getNewLine(currentLineIndex, staff);
@@ -32,8 +32,8 @@ export function buildStaffLines(staff: Staff, containerWidth: number): StaffView
   return lines;
 }
 
-function getNewLine(index: number, staff: Staff): { line: StaffViewLine, width: number } {
-  let items: StaffViewLineItem[] = [
+function getNewLine(index: number, staff: IStaff): { line: IStaffViewLine, width: number } {
+  let items: IStaffViewLineItem[] = [
     { type: StaffViewLineItemTypes.Clef },
     { type: StaffViewLineItemTypes.TonalitySign },
   ];
@@ -49,6 +49,6 @@ function getNewLine(index: number, staff: Staff): { line: StaffViewLine, width: 
   return { line: { items }, width };
 }
 
-function getBarSize(bar: Bar): number {
+function getBarSize(bar: IBar): number {
   return Math.max(...bar.clefs.map((clef) => clef.notes.length)) * staffLineItemSizeNote;
 }

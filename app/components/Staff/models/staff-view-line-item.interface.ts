@@ -1,9 +1,9 @@
-import { Bar } from '@/models/bar.interface';
+import { IBar } from '@/models/bar.interface';
 import { StaffViewLineItemTypes } from './staff-view-line-item-types.enum';
 
-export type StaffViewLineItem = {
+export type IStaffViewLineItem = {
   type: Extract<StaffViewLineItemTypes, StaffViewLineItemTypes.Bar>,
-  bar: Bar,
+  bar: IBar,
 } | {
   type: Exclude<StaffViewLineItemTypes, StaffViewLineItemTypes.Bar>,
 };

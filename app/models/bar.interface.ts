@@ -1,7 +1,7 @@
 import { BarTypes } from './bar-types.enum';
-import { StaffBarClef } from './staff-bar-clef.interface';
+import { IStaffBarClef } from './staff-bar-clef.interface';
 
-export interface Bar {
+export interface IBar {
   type?: BarTypes;
-  clefs: StaffBarClef[];
+  clefs: IStaffBarClef[];
 }

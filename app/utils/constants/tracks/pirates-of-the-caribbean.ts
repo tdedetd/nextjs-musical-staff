@@ -1,8 +1,8 @@
 import { NoteValues } from '@/models/note-values.enum';
-import { Staff } from '@/models/staff.interface';
+import { IStaff } from '@/models/staff.interface';
 import { BarTypes } from '@/models/bar-types.enum';
 
-export const piratesOfTheCaribbean: Staff = {
+export const piratesOfTheCaribbean: IStaff = {
   name: 'Pirates of the Caribbean',
   tempo: 140,
   scale: 'min',
