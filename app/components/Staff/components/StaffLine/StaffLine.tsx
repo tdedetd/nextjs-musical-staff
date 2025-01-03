@@ -8,7 +8,7 @@ import { IStaffViewLine } from '../../models/staff-view-line.interface';
 import { StaffViewLineItemTypes } from '../../models/staff-view-line-item-types.enum';
 import { staffLineItemSizeClef } from '../../constants/staff-line-item-size-clef';
 import { staffLineItemSizeSignature } from '../../constants/staff-line-item-size-signature';
-import { getAccidentalSignesForTonality } from '../../../../utils/functions/get-accidental-signes-for-tonality';
+import { getAccidentalSignesForTonality } from '@/utils/functions/get-accidental-signes-for-tonality';
 import { staffLineItemSizeTonalitySign } from '../../constants/staff-line-item-size-tonality-sign';
 
 function getGridTemplateRows(staff: IStaff): string {

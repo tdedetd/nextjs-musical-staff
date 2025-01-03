@@ -1,0 +1,12 @@
+.strings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 60px;
+}
+
+.string {
+  height: 0;
+  border-bottom: var(--border-width) solid var(--foreground);
+}

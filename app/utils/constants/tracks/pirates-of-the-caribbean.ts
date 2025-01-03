@@ -13,6 +13,7 @@ export const piratesOfTheCaribbean: IStaff = {
   },
   clefs: ['treble', 'bass'],
   bars: [
+    // bar 1
     {
       clefs: [
         {
@@ -55,6 +56,7 @@ export const piratesOfTheCaribbean: IStaff = {
         }
       ],
     },
+    // bar 2
     {
       clefs: [
         {
@@ -97,6 +99,7 @@ export const piratesOfTheCaribbean: IStaff = {
         }
       ],
     },
+    // bar 3
     {
       clefs: [
         {
@@ -141,6 +144,7 @@ export const piratesOfTheCaribbean: IStaff = {
         }
       ],
     },
+    // bar 4
     {
       type: BarTypes.Double,
       clefs: [
@@ -186,5 +190,122 @@ export const piratesOfTheCaribbean: IStaff = {
         }
       ],
     },
+    // no 5
+    {
+      clefs: [
+        {
+          notes: [
+            {
+              note: 'D',
+              octave: 5,
+              value: NoteValues.Quarter,
+            },
+            {
+              note: 'D',
+              octave: 5,
+              value: NoteValues.Quarter,
+            },
+            {
+              note: 'D',
+              octave: 5,
+              value: NoteValues.Eighth,
+            },
+            {
+              note: 'E',
+              octave: 5,
+              value: NoteValues.Eighth,
+            },
+          ]
+        },
+        {
+          notes: [
+            {
+              note: 'D',
+              octave: 4,
+              value: NoteValues.Half,
+              dot: true,
+            },
+          ]
+        },
+      ]
+    },
+    // bar 6
+    {
+      clefs: [
+        {
+          notes: [
+            {
+              note: 'F',
+              octave: 5,
+              value: NoteValues.Quarter,
+            },
+            {
+              note: 'F',
+              octave: 5,
+              value: NoteValues.Quarter,
+            },
+            {
+              note: 'F',
+              octave: 5,
+              value: NoteValues.Eighth,
+            },
+            {
+              note: 'G',
+              octave: 5,
+              value: NoteValues.Eighth,
+            },
+          ]
+        },
+        {
+          notes: [
+            {
+              note: 'Bf',
+              octave: 3,
+              value: NoteValues.Half,
+              dot: true,
+            }
+          ]
+        }
+      ],
+    },
+    // bar 7
+    {
+      clefs: [
+        {
+          notes: [
+            {
+              note: 'E',
+              octave: 5,
+              value: NoteValues.Quarter,
+            },
+            {
+              note: 'E',
+              octave: 5,
+              value: NoteValues.Quarter,
+            },
+            {
+              note: 'E',
+              octave: 5,
+              value: NoteValues.Eighth,
+            },
+            {
+              note: 'G',
+              octave: 5,
+              value: NoteValues.Eighth,
+            },
+          ]
+        },
+        {
+          notes: [
+            {
+              note: 'A',
+              octave: 3,
+              value: NoteValues.Half,
+              dot: true,
+            },
+          ]
+        }
+      ]
+    }
   ],
 };

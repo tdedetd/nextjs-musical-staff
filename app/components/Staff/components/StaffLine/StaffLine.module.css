@@ -1,4 +1,5 @@
 .grid {
   display: grid;
   grid-auto-flow: column;
+  border-left: var(--border-width) solid var(--foreground);
 }

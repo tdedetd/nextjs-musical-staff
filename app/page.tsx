@@ -7,12 +7,12 @@ import { debounce } from './utils/functions/debounce';
 
 export default function Home(): JSX.Element {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = useState(containerRef.current?.clientWidth ?? 0);
+  const [containerWidth, setContainerWidth] = useState(0);
 
   useLayoutEffect(() => {
     setContainerWidth(containerRef.current?.clientWidth ?? 0);
 
-    const listener = debounce(window, 'resize', 500, () => {
+    const listener = debounce(window, 'resize', 200, () => {
       setContainerWidth(containerRef.current?.clientWidth ?? 0);
     });
 

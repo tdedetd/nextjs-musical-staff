@@ -3,6 +3,7 @@ import { StaffLineItemProps } from './StaffLineItem.props';
 import { StaffViewLineItemTypes } from '../../models/staff-view-line-item-types.enum';
 import classNames from 'classnames';
 import styles from './StaffLineItem.module.css';
+import { StaffStrings } from '../StaffStrings/StaffStrings';
 
 export function StaffLineItem({ item, staff }: StaffLineItemProps): JSX.Element {
   const isBar = item.type === StaffViewLineItemTypes.Bar;
@@ -13,7 +14,7 @@ export function StaffLineItem({ item, staff }: StaffLineItemProps): JSX.Element 
         return (
           <React.Fragment key={index}>
             <div className={classNames({ [styles.barBorder]: isBar && index > 0 })}></div>
-            <div className={classNames({ [styles.barBorder]: isBar })}></div>
+            <StaffStrings className={classNames({ [styles.barBorder]: isBar })} item={item} staff={staff} />
             <div className={classNames({ [styles.barBorder]: isBar && !isLast })}></div>
             {!isLast && (
               <div className={classNames(
